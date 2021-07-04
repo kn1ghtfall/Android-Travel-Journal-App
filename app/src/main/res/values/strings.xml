@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TravelJournal</string>
+    <string name="best_of_greece">Best of Greece</string>
+    <string name="destinations">Destinations:</string>
+    <string name="athens_mykonos_santorini">Athens, Mykonos, Santorini</string>
+    <string name="tour_length">Tour length</string>
+    <string name="_10_days">10 days</string>
+    <string name="country_region">Country Region:</string>
+    <string name="regions">Regions</string>
+    <string name="greek_islands_aegean_islands_cyclades_greece_athens_santorini_amp_mykonos"><![CDATA[Greek Islands, Aegean Islands, Cyclades Greece, Athens Santorini & Mykonos]]></string>
+    <string name="year_olds">year olds</string>
+
+</resources>
