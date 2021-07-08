@@ -1,4 +1,4 @@
-package ro.scoalainformala.traveljournal;
+package ro.scoalainformala.traveljournal.ui.trip;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import ro.scoalainformala.traveljournal.R;
 
 public class TripsAdapter extends RecyclerView.Adapter<TripViewHolder> {
     private final List<Trip> trips;

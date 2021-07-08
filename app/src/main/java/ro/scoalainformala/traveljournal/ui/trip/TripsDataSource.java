@@ -1,7 +1,9 @@
-package ro.scoalainformala.traveljournal;
+package ro.scoalainformala.traveljournal.ui.trip;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ro.scoalainformala.traveljournal.R;
 
 public class TripsDataSource {
 

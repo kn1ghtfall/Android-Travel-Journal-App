@@ -4,20 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import ro.scoalainformala.traveljournal.MainActivity2;
-import ro.scoalainformala.traveljournal.R;
-import ro.scoalainformala.traveljournal.TripsAdapter;
-import ro.scoalainformala.traveljournal.TripsDataSource;
+import ro.scoalainformala.traveljournal.ui.trip.TripsAdapter;
+import ro.scoalainformala.traveljournal.ui.trip.TripsDataSource;
 import ro.scoalainformala.traveljournal.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -37,7 +31,7 @@ public class HomeFragment extends Fragment {
 
         recyclerView.setAdapter(adapter);
 
-        return root;
+        return  root;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ro.scoalainformala.traveljournal;
+package ro.scoalainformala.traveljournal.ui.trip;
 
 import androidx.annotation.DrawableRes;
 

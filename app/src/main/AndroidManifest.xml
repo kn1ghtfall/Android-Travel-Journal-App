@@ -13,6 +13,9 @@
             android:name=".MainActivity2"
             android:label="Travel Journal"
             android:theme="@style/Theme.TravelJournal.NoActionBar">
+
+        </activity>
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
