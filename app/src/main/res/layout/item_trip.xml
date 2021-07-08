@@ -45,10 +45,13 @@
 
 
         <CheckBox
+            android:layout_marginLeft="8dp"
             android:id="@+id/item_trip_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:button="@drawable/checkbox"
             android:layout_alignParentEnd="true"
+            android:buttonTint="#FF0000"
              />
 
     </RelativeLayout>

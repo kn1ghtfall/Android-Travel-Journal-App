@@ -11,7 +11,7 @@
         android:theme="@style/Theme.TravelJournal">
         <activity
             android:name=".MainActivity2"
-            android:label="@string/title_activity_main2"
+            android:label="Travel Journal"
             android:theme="@style/Theme.TravelJournal.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

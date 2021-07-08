@@ -20,6 +20,11 @@ import ro.scoalainformala.traveljournal.databinding.ActivityMain2Binding;
 public class MainActivity2 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+
+
+
+    // binding - replaces 'findViewById()'
+    // ActivityMainBinging -> class generated when using binding, it contains the id-s from activity_main.xml
     private ActivityMain2Binding binding;
 
     @Override
