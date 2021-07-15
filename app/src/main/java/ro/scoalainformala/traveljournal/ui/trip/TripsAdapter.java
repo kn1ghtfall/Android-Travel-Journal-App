@@ -13,6 +13,8 @@ import ro.scoalainformala.traveljournal.R;
 
 public class TripsAdapter extends RecyclerView.Adapter<TripViewHolder> {
     private final List<Trip> trips;
+    private TripSelectedListener tripSelectedListener = null ;
+
 
     public TripsAdapter(List<Trip> trips){
         this.trips = trips;
@@ -25,9 +27,21 @@ public class TripsAdapter extends RecyclerView.Adapter<TripViewHolder> {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View itemView = layoutInflater.inflate(R.layout.item_trip, parent, false);
 
-        return new TripViewHolder(itemView);
+        TripViewHolder viewHolder = new TripViewHolder(itemView);
+
+//        itemView.setOnClickListener( v->{
+//            if(tripSelectedListener != null ){
+//                tripSelectedListener.onTripSelected(trips.get(viewHolder.getAdapterPosition()));
+//            }
+//        });
+
+        return viewHolder;
 
     }
+
+//    public void setTripSelectedListener(TripSelectedListener tripSelectedListener) {
+//        this.tripSelectedListener = tripSelectedListener;
+//    }
 
     @Override
     public void onBindViewHolder(@NonNull TripViewHolder holder, int position) {

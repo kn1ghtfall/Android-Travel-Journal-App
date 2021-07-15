@@ -23,5 +23,17 @@
     <string name="travel_journal">Travel Journal</string>
     <string name="joe_rogan_gmail_com">joe.rogan@gmail.com</string>
     <string name="joe_rogan">Joe Rogan</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="about_us_version">Version 1.0</string>
+    <string name="about_us_developer">Developer: Coconu Robert-Iulian</string>
+    <string name="trip_name">Trip name:</string>
+    <string name="destination">Destination</string>
+
+    <string name="city_break">City Break</string>
+    <string name="sea_side">Sea Side</string>
+    <string name="mountains">Mountains</string>
+    <string name="trip_type">Trip Type:</string>
 
 </resources>

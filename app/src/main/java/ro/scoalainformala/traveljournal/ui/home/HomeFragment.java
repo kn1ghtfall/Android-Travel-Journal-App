@@ -31,6 +31,11 @@ public class HomeFragment extends Fragment {
 
         recyclerView.setAdapter(adapter);
 
+
+//        adapter.setTripSelectedListener(trip -> {
+//            // pasare chestii
+//        });
+
         return  root;
     }
 

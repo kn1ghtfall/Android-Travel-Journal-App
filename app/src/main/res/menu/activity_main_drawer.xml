@@ -2,19 +2,37 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
-    <group android:checkableBehavior="single">
+    <!--These are our main navigation actions, they should be checkable and only one should be checked all the time, representing
+       the current active screen-->
+    <group
+        android:id="@+id/main_drawer_actions"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_group"
+            android:title="@string/menu_about_us" />
     </group>
+
+
+    <!--These are our secondary navigation drawer actions, they don't represent a screen or a state of the app, so they don't need to be checkable-->
+    <group
+        android:id="@+id/secondary_action"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="@string/menu_share" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_baseline_contact_mail_24"
+            android:title="@string/menu_contact" />
+
+
+    </group>
+
+
 </menu>

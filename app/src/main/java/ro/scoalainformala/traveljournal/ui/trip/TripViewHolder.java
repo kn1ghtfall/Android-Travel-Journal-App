@@ -55,4 +55,6 @@ public class TripViewHolder extends RecyclerView.ViewHolder {
 
     }
 
+
+
 }
