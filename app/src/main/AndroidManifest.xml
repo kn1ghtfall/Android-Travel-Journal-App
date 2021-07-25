@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".addTrip.AddTrip"
+        <activity android:name=".addTrip.NewTripActivity"
             android:parentActivityName=".MainActivity2">
 
         </activity>

@@ -36,5 +36,6 @@
     <string name="mountains">Mountains</string>
     <string name="trip_type">Trip Type:</string>
     <string name="pick_start_date">Pick start date</string>
+    <string name="empty_not_saved">You did not provide enough information</string>
 
 </resources>

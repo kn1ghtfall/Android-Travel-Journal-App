@@ -7,6 +7,12 @@
     >
 
 
+    <EditText
+        android:id="@+id/add_trip_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Trip ID"/>
+
     <TextView
         android:id="@+id/add_trip_name_text"
         android:layout_width="wrap_content"
@@ -35,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/destination"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintTop_toBottomOf="@id/add_trip_name_value"
         app:layout_constraintStart_toStartOf="parent"
 
@@ -51,73 +58,54 @@
         android:autofillHints="destination"
         />
 
-    <TextView
-        android:id="@+id/add_trip_trip_type_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/trip_type"
-        app:layout_constraintTop_toBottomOf="@id/add_trip_destination_value"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        />
 
-    <RadioGroup
-        android:id="@+id/add_trip_trip_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/add_trip_trip_type_text"
-        app:layout_constraintStart_toStartOf="parent"
-        >
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/city_break"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sea_side"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/mountains"/>
-
-
-
-    </RadioGroup>
 
 
     <TextView
-        android:id="@+id/add_trip_price"
+        android:id="@+id/add_trip_price_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Price:"
-        app:layout_constraintTop_toBottomOf="@id/add_trip_trip_type"
+        app:layout_constraintTop_toBottomOf="@id/add_trip_destination_value"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <com.google.android.material.slider.Slider
         android:id="@+id/add_trip_slider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/add_trip_price"
+        app:layout_constraintTop_toBottomOf="@id/add_trip_price_text"
         app:layout_constraintStart_toStartOf="parent"
         android:valueFrom="0.0"
-        android:valueTo="100.0"
+        android:valueTo="3000.0"
         />
 
-    <Button
+    <EditText
+        android:id="@+id/add_trip_regions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pick_start_date"
-        android:onClick="showDatePickerDialog"/>
-    <TextView
+        android:hint="Regions"/>
+
+    <RatingBar
+        android:id="@+id/add_trip_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="End date:"/>
+        />
+
+    <EditText
+        android:id="@+id/add_trip_age_interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="age interval"/>
+
+    <EditText
+        android:id="@+id/add_trip_nr_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="tour lenth in days"/>
 
 
     <Button
+        android:id="@+id/new_trip_save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="save"/>
