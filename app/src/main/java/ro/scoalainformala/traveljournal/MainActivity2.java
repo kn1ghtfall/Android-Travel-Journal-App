@@ -21,6 +21,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import ro.scoalainformala.traveljournal.addTrip.AddTrip;
 import ro.scoalainformala.traveljournal.databinding.ActivityMain2Binding;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -41,13 +42,16 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-//        add new trip button
         setSupportActionBar(binding.appBarMain.toolbar);
+
+//        add new trip button
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Add new trip", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Add new trip", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity2.this, AddTrip.class);
+                startActivity(intent);
             }
         });
 
@@ -57,7 +61,7 @@ public class MainActivity2 extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,  R.id.nav_share, R.id.nav_about_us)
+                R.id.nav_home, R.id.nav_about_us)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -138,5 +142,9 @@ public class MainActivity2 extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+
+
 
 }

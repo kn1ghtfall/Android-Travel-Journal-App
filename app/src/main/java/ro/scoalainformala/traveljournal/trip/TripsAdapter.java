@@ -1,4 +1,4 @@
-package ro.scoalainformala.traveljournal.ui.trip;
+package ro.scoalainformala.traveljournal.trip;
 
 import android.view.LayoutInflater;
 import android.view.View;

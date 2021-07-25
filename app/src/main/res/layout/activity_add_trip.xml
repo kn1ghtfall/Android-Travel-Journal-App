@@ -106,12 +106,11 @@
         android:valueTo="100.0"
         />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Date:"/>
-
-
+        android:text="@string/pick_start_date"
+        android:onClick="showDatePickerDialog"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

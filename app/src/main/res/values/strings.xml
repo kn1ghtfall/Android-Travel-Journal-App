@@ -35,5 +35,6 @@
     <string name="sea_side">Sea Side</string>
     <string name="mountains">Mountains</string>
     <string name="trip_type">Trip Type:</string>
+    <string name="pick_start_date">Pick start date</string>
 
 </resources>

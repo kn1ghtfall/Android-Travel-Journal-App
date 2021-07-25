@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import ro.scoalainformala.traveljournal.ui.trip.TripsAdapter;
-import ro.scoalainformala.traveljournal.ui.trip.TripsDataSource;
+import ro.scoalainformala.traveljournal.trip.TripsAdapter;
+import ro.scoalainformala.traveljournal.trip.TripsDataSource;
 import ro.scoalainformala.traveljournal.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {

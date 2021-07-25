@@ -1,4 +1,4 @@
-package ro.scoalainformala.traveljournal.ui.trip;
+package ro.scoalainformala.traveljournal.trip;
 
 public interface TripSelectedListener {
 
