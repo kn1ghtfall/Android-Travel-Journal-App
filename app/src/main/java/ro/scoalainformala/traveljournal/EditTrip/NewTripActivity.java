@@ -1,17 +1,14 @@
-package ro.scoalainformala.traveljournal.addTrip;
+package ro.scoalainformala.traveljournal.EditTrip;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
-import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.slider.Slider;
 
@@ -49,7 +46,7 @@ public class NewTripActivity extends AppCompatActivity {
 
         button.setOnClickListener(v->{
             Intent replyIntent = new Intent();
-            if(TextUtils.isEmpty(mEditTitleView.getText()) ){
+            if(TextUtils.isEmpty(mEditIDView.getText()) ){
                 setResult(RESULT_CANCELED, replyIntent);
             }
             else{

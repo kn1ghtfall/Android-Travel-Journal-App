@@ -101,7 +101,7 @@
         android:id="@+id/add_trip_nr_days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="tour lenth in days"/>
+        android:hint="tour length in days"/>
 
 
     <Button

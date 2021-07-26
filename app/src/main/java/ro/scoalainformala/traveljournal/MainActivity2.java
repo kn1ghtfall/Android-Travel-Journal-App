@@ -21,7 +21,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import ro.scoalainformala.traveljournal.addTrip.NewTripActivity;
+import ro.scoalainformala.traveljournal.EditTrip.NewTripActivity;
+import ro.scoalainformala.traveljournal.EditTrip.RemoveTripActivity;
 import ro.scoalainformala.traveljournal.databinding.ActivityMain2Binding;
 import ro.scoalainformala.traveljournal.roomdatabase.Trip;
 import ro.scoalainformala.traveljournal.roomdatabase.TripViewModel;
@@ -29,7 +30,8 @@ import ro.scoalainformala.traveljournal.roomdatabase.TripViewModel;
 public class MainActivity2 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
+    public static final int NEW_TRIP_ACTIVITY_REQUEST_CODE = 1;
+    public static final int REMOVE_TRIP_ACTIVITY_REQUEST_CODE = 2;
 
 
     // binding - replaces 'findViewById()'
@@ -121,18 +123,31 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
 
-
+        mTripViewModel = new ViewModelProvider(this).get(TripViewModel.class);
 
         //        add new trip button
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
+        binding.appBarMain.addFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                Snackbar.make(view, "Add new trip", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
                 Intent intent = new Intent(MainActivity2.this, NewTripActivity.class);
-                startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
+                startActivityForResult(intent, NEW_TRIP_ACTIVITY_REQUEST_CODE);
             }
         });
+
+
+        binding.appBarMain.removeFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity2.this, RemoveTripActivity.class);
+                startActivityForResult(intent, REMOVE_TRIP_ACTIVITY_REQUEST_CODE);
+                mTripViewModel.deleteById(100);
+            }
+        });
+
+
+
 
     }
 
@@ -155,7 +170,7 @@ public class MainActivity2 extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if ( requestCode == NEW_WORD_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK ) {
+        if ( requestCode == NEW_TRIP_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK ) {
 
             int ID = Integer.parseInt(data.getStringExtra("ID"));
             String title = data.getStringExtra("TITLE");
@@ -169,9 +184,14 @@ public class MainActivity2 extends AppCompatActivity {
             mTripViewModel = new ViewModelProvider(this).get(TripViewModel.class);
 
 
-            Trip trip = new Trip(ID , R.drawable.italy_trip_1,title, rating, description, region, ageInterval, nr_days, total_price, true );
+            Trip trip = new Trip(ID , R.drawable.vietnam_trip_1_vietnam_experience,title, rating, description, region, ageInterval, nr_days, total_price, false );
             mTripViewModel.insert(trip);
-        } else {
+        }
+        else if( requestCode == REMOVE_TRIP_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
+            int ID = Integer.parseInt(data.getStringExtra("ID"));
+            mTripViewModel.deleteById(ID);
+        }
+        else {
             Toast.makeText(
                     getApplicationContext(),
                     R.string.empty_not_saved,
