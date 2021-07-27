@@ -58,9 +58,6 @@
         android:autofillHints="destination"
         />
 
-
-
-
     <TextView
         android:id="@+id/add_trip_price_text"
         android:layout_width="wrap_content"
@@ -77,6 +74,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:valueFrom="0.0"
         android:valueTo="3000.0"
+        android:stepSize="5"
         />
 
     <EditText

@@ -6,6 +6,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -23,4 +24,8 @@ public interface TripDao {
 
     @Query("DELETE FROM trip_table WHERE ID = :id")
     void deleteById(int id);
+
+    @Update(onConflict = OnConflictStrategy.IGNORE, entity = Trip.class)
+    public void updateTrip(Trip trip);
+
 }

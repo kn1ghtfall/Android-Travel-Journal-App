@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:id="@+id/item_parent_layout"
+    >
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
